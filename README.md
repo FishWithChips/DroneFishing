@@ -1,5 +1,4 @@
-Fish with Chips - PowerBobber.com
-# http://DIYDroneFishing.com 
+Fish with Chips - 
 
 An open source repository for our Remote Control Drone Fishing Kit!
 
@@ -18,6 +17,9 @@ We outline all the parts you need to put together your own drone fishing device!
 Or you can buy our kit and assemble it yourself or order a fully assembled kit.
 
 This is Fishing Awesome!
+
+http://PowerBobber.com
+http://DIYDroneFishing.com 
 #DroneFishing
 
 
