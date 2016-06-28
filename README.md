@@ -1,4 +1,4 @@
-Fish with Chips - 
+Drone Fishing
 
 An open source repository for our Remote Control Drone Fishing Kit!
 
@@ -20,6 +20,7 @@ This is Fishing Awesome!
 
 http://PowerBobber.com
 http://DIYDroneFishing.com 
+
 #DroneFishing
 
 
