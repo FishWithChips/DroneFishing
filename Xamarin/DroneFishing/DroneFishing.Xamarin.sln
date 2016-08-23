@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DroneFishing.Core", "DroneFishing.Core\DroneFishing.Core.csproj", "{2D3645C4-EEBE-4FE3-BFA9-EF0B0ED733D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DroneFishing.Console", "DroneFishing.Console\DroneFishing.Console.csproj", "{2753699C-7154-42F7-AA84-EF213D9CA80B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DroneFishing.Android", "DroneFishing.Android\DroneFishing.Android.csproj", "{1FDCA21D-036F-43F1-BEA0-F6732F33D63D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D3645C4-EEBE-4FE3-BFA9-EF0B0ED733D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D3645C4-EEBE-4FE3-BFA9-EF0B0ED733D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D3645C4-EEBE-4FE3-BFA9-EF0B0ED733D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D3645C4-EEBE-4FE3-BFA9-EF0B0ED733D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2753699C-7154-42F7-AA84-EF213D9CA80B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2753699C-7154-42F7-AA84-EF213D9CA80B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2753699C-7154-42F7-AA84-EF213D9CA80B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2753699C-7154-42F7-AA84-EF213D9CA80B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FDCA21D-036F-43F1-BEA0-F6732F33D63D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FDCA21D-036F-43F1-BEA0-F6732F33D63D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FDCA21D-036F-43F1-BEA0-F6732F33D63D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{1FDCA21D-036F-43F1-BEA0-F6732F33D63D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FDCA21D-036F-43F1-BEA0-F6732F33D63D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FDCA21D-036F-43F1-BEA0-F6732F33D63D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

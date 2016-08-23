@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:text="Enter your Device Id:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textDeviceId" />
+    <TextView
+        android:text="Enter your Access Token:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textAccessToken" />
+    <Button
+        android:text="Connect to Device"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/connectDeviceButton" />
+    <Button
+        android:text="Drop the Bait!"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/dropBaitButton" />
+</LinearLayout>
