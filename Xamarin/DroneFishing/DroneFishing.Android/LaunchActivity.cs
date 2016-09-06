@@ -17,8 +17,8 @@ namespace DroneFishing.Android
     [Activity(Label = "DIY Drone Fishing", MainLauncher = true, Icon = "@drawable/icon")]
     public class LaunchActivity : Activity
     {
-        private int servoPosition1 = 0;
-        private int servoPosition2 = 180;
+        private int servoPosition1 = 30;
+        private int servoPosition2 = 150;
         private bool servoState = false; //False means hasnt moved
         private bool connected = false; // Not connected to device
         private string deviceId;
@@ -39,12 +39,23 @@ namespace DroneFishing.Android
                 //Load Bundle Values
                 deviceId = bundle.GetString("device_id");
                 accessToken = bundle.GetString("access_token");
+                servoPosition1 = bundle.GetInt("servopos1");
+                servoPosition2 = bundle.GetInt("servopos2");
             }
             else
             {
                 var storage = SimpleStorage.EditGroup("Devices");
                 deviceId = storage.Get("device_id");
                 accessToken = storage.Get("access_token");
+                int pos = 0;
+                if (int.TryParse(storage.Get("servopos1"), out pos))
+                {
+                    servoPosition1 = pos;
+                }
+                if (int.TryParse(storage.Get("servopos2"), out pos))
+                {
+                    servoPosition2 = pos;
+                }
             }
 
             Log.Debug(GetType().FullName, "LaunchActivity - OC - Recovered instance state");
@@ -55,15 +66,14 @@ namespace DroneFishing.Android
 
             FindViewById<EditText>(Resource.Id.textDeviceId).Text = deviceId;
             FindViewById<EditText>(Resource.Id.textAccessToken).Text = accessToken;
+            FindViewById<EditText>(Resource.Id.textServo1).Text = servoPosition1.ToString();
+            FindViewById<EditText>(Resource.Id.txtServo2).Text = servoPosition2.ToString();
 
             // Get our button from the layout resource,
             // and attach an event to it
             Button button = FindViewById<Button>(Resource.Id.dropBaitButton);
             button.Click += Button_Click1;
 
-            Button button2 = FindViewById<Button>(Resource.Id.connectDeviceButton);
-            button2.Click += Button2_Click;
-            
         }
 
         private void Button2_Click(object sender, EventArgs e)
@@ -113,10 +123,14 @@ namespace DroneFishing.Android
 
             outState.PutString("device_id", deviceIdText.Text);
             outState.PutString("access_token", accessTokenText.Text);
+            outState.PutInt("servopos1", servoPosition1);
+            outState.PutInt("servopos2", servoPosition2);
 
             var storage = SimpleStorage.EditGroup("Devices");
             storage.Put("device_id", deviceIdText.Text);
             storage.Put("access_token", accessTokenText.Text);
+            storage.Put("servopos1", servoPosition1);
+            storage.Put("servopos2", servoPosition2);
 
             Log.Debug(GetType().FullName, "LaunchActivity - Saving instance state");
 
@@ -128,9 +142,13 @@ namespace DroneFishing.Android
             //Load Bundle Values
             deviceId = savedInstanceState.GetString("device_id");
             accessToken = savedInstanceState.GetString("access_token");
+            servoPosition1 = savedInstanceState.GetInt("servopos1");
+            servoPosition2 = savedInstanceState.GetInt("servopos2");
 
             FindViewById<EditText>(Resource.Id.textDeviceId).Text = deviceId; 
             FindViewById<EditText>(Resource.Id.textAccessToken).Text = accessToken;
+            FindViewById<EditText>(Resource.Id.textServo1).Text = servoPosition1.ToString();
+            FindViewById<EditText>(Resource.Id.txtServo2).Text = servoPosition2.ToString();
 
             Log.Debug(GetType().FullName, "LaunchActivity - Recovered instance state");
             base.OnRestoreInstanceState(savedInstanceState);
@@ -147,13 +165,13 @@ namespace DroneFishing.Android
 
             if (!servoState)
             {
-                servoPosition = servoPosition2;
+                servoPosition = servoPosition1;
                 servoState = true;
                 FindViewById<Button>(Resource.Id.dropBaitButton).Text = "Return to closed position.";
             }
             else
             {
-                servoPosition = servoPosition1;
+                servoPosition = servoPosition2;
                 servoState = false;
                 FindViewById<Button>(Resource.Id.dropBaitButton).Text = "Drop the bait!.";
             }

@@ -23,12 +23,29 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textAccessToken" />
-    <Button
-        android:text="Connect to Device"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/connectDeviceButton" />
-    <Button
+  <TextView
+      android:text="Servo Start Position:"
+      android:textAppearance="?android:attr/textAppearanceMedium"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/textView3" />
+  <EditText
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/textServo1" />
+
+  <TextView
+    android:text="Servo End Position:"
+    android:textAppearance="?android:attr/textAppearanceMedium"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/textView4" />
+  <EditText
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/txtServo2" />
+
+  <Button
         android:text="Drop the Bait!"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
